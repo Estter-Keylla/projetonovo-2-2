@@ -1,0 +1,951 @@
+
+/* ==========================================
+   CULTURAMA - CSS PRINCIPAL
+   ========================================== */
+
+/* PALETA DE CORES */
+:root {
+    --cor-primaria: #087f9c;
+    --cor-primaria-escura: #07566e;
+    --cor-secundaria: #10a7c4;
+    --cor-turquesa: #21c3d8;
+
+    --cor-fundo: #f3f8fb;
+    --cor-branco: #ffffff;
+    --cor-fundo-claro: #e9f7fa;
+
+    --cor-texto: #263b4a;
+    --cor-texto-claro: #617583;
+    --cor-borda: #d7e6ec;
+
+    --cor-destaque: #f5b942;
+    --cor-sucesso: #16865a;
+
+    --sombra: 0 5px 20px rgba(6, 67, 86, 0.08);
+
+    --raio: 14px;
+    --fonte: Arial, Helvetica, sans-serif;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-primaria-escura);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secao {
+    margin-bottom: 38px;
+}
+
+/* ACESSIBILIDADE */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   CABEÇALHO
+   ========================================== */
+
+.cabecalho {
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.cabecalho-conteudo {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    white-space: nowrap;
+}
+
+.logo:hover {
+    color: var(--cor-secundaria);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--cor-primaria);
+    border-bottom-color: var(--cor-secundaria);
+}
+
+/* ==========================================
+   BANNER PRINCIPAL
+   ========================================== */
+
+.banner {
+    background: linear-gradient(
+        120deg,
+        var(--cor-primaria-escura),
+        var(--cor-primaria),
+        var(--cor-secundaria)
+    );
+    color: var(--cor-branco);
+    padding: 65px 0;
+}
+
+.banner-conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.banner-texto h1 {
+    max-width: 680px;
+    margin: 12px 0 20px;
+    color: var(--cor-branco);
+    font-size: 2.8rem;
+}
+
+.banner-texto p {
+    max-width: 570px;
+    color: var(--cor-branco);
+}
+
+.subtitulo {
+    color: var(--cor-secundaria);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner .subtitulo {
+    color: #b9f4ff;
+}
+
+.banner-lateral {
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+}
+
+.banner-lateral h2,
+.banner-lateral p {
+    color: var(--cor-branco);
+}
+
+.banner-icone {
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* ==========================================
+   BOTÕES
+   ========================================== */
+
+.botao-principal,
+.botao-claro,
+.botao-card {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.botao-principal {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.botao-principal:hover {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+}
+
+.banner .botao-principal {
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria-escura);
+}
+
+.banner .botao-principal:hover {
+    background-color: var(--cor-fundo-claro);
+}
+
+.botao-claro {
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+}
+
+.botao-claro:hover {
+    background-color: var(--cor-fundo-claro);
+}
+
+.banner .botao-claro {
+    background-color: transparent;
+    border: 1px solid var(--cor-branco);
+    color: var(--cor-branco);
+}
+
+.banner .botao-claro:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.botao-card {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-primaria);
+    width: 100%;
+    margin-top: 15px;
+}
+
+.botao-card:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+/* ==========================================
+   BENEFÍCIOS
+   ========================================== */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.beneficio {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 25px;
+    text-align: center;
+}
+
+.beneficio h3 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 10px;
+}
+
+.beneficio p {
+    color: var(--cor-texto-claro);
+}
+
+.beneficio-icone {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   LAYOUT PRINCIPAL
+   ========================================== */
+
+.layout-principal,
+.layout-detalhes {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.conteudo {
+    min-width: 0;
+}
+
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+    color: var(--cor-primaria-escura);
+}
+
+.titulo-secao a {
+    font-weight: bold;
+}
+
+/* ==========================================
+   CARTÕES DE EVENTOS
+   ========================================== */
+
+.grade-eventos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 210px), 1fr)
+    );
+    gap: 20px;
+}
+
+.card-evento {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.imagem-evento {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-evento span {
+    font-size: 4rem;
+}
+
+.imagem-show {
+    background: linear-gradient(135deg, #0b668e, #2bc4db);
+}
+
+.imagem-comunidade {
+    background: linear-gradient(135deg, #149b8b, #8be2c4);
+}
+
+.imagem-palestra {
+    background: linear-gradient(135deg, #3a78bb, #8fc9f2);
+}
+
+.card-corpo {
+    padding: 20px;
+}
+
+.card-corpo h3 {
+    color: var(--cor-primaria-escura);
+    margin: 10px 0;
+}
+
+.card-corpo p {
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+}
+
+.categoria {
+    display: inline-block;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-primaria);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 30px;
+}
+
+.card-corpo .preco {
+    color: var(--cor-sucesso);
+    font-weight: bold;
+}
+
+/* ==========================================
+   ARTISTAS
+   ========================================== */
+
+.grade-artistas {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 180px), 1fr)
+    );
+    gap: 20px;
+}
+
+.card-artista {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.avatar-artista {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: var(--cor-fundo-claro);
+    font-size: 2rem;
+}
+
+.card-artista h3 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 10px;
+}
+
+.card-artista p {
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   PAINÉIS
+   ========================================== */
+
+.painel {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 25px;
+    box-shadow: var(--sombra);
+}
+
+.painel h2 {
+    color: var(--cor-primaria-escura);
+    margin-bottom: 18px;
+}
+
+.painel p {
+    color: var(--cor-texto-claro);
+}
+
+.painel .aviso {
+    background-color: #fff8e6;
+    border-left: 4px solid var(--cor-destaque);
+    padding: 12px;
+    border-radius: 5px;
+    color: var(--cor-texto);
+    margin: 15px 0;
+}
+
+/* ==========================================
+   CALENDÁRIO
+   ========================================== */
+
+.calendario {
+    background-color: var(--cor-branco);
+}
+
+.calendario h3 {
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.calendario-grade {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+}
+
+.dia-semana {
+    color: var(--cor-primaria-escura);
+    font-size: 0.68rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.dia {
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    font-size: 0.75rem;
+}
+
+.dia-evento {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+.dia-evento:hover {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+}
+
+.legenda {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* ==========================================
+   PRÓXIMOS EVENTOS
+   ========================================== */
+
+.evento-resumo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.evento-resumo:last-child {
+    border-bottom: none;
+}
+
+.data-resumo {
+    flex-shrink: 0;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.evento-resumo h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.evento-resumo a {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* ==========================================
+   FORMULÁRIOS
+   ========================================== */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.form-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    padding: 12px;
+    outline-offset: 2px;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: var(--cor-secundaria);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario .checkbox-label {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+.formulario .botao-principal {
+    align-self: flex-start;
+}
+
+/* ==========================================
+   PÁGINAS INTERNAS
+   ========================================== */
+
+.pagina-interna {
+    padding-top: 45px;
+    padding-bottom: 60px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-pagina h1 {
+    color: var(--cor-primaria-escura);
+    margin: 10px 0 15px;
+}
+
+.titulo-pagina > p:last-child {
+    color: var(--cor-texto-claro);
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.categorias a {
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-borda);
+    border-radius: 30px;
+    padding: 12px 22px;
+    font-weight: bold;
+}
+
+.categorias a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.detalhes-card {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 8px;
+}
+
+.detalhes-card summary {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.detalhes-card p {
+    margin-top: 12px;
+    color: var(--cor-texto);
+}
+
+/* ==========================================
+   DETALHES DO EVENTO
+   ========================================== */
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.detalhe-banner {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    align-items: center;
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--sombra);
+}
+
+.detalhe-ilustracao {
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        var(--cor-primaria),
+        var(--cor-turquesa)
+    );
+    border-radius: 12px;
+    font-size: 6rem;
+}
+
+.detalhe-introducao h1 {
+    color: var(--cor-primaria-escura);
+    margin: 15px 0;
+}
+
+.detalhe-introducao p {
+    color: var(--cor-texto-claro);
+}
+
+.selo-gratuito {
+    display: inline-block;
+    background-color: #dff7eb;
+    color: var(--cor-sucesso);
+    border-radius: 30px;
+    padding: 7px 14px;
+    font-weight: bold;
+}
+
+.layout-detalhes .conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.programacao-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 14px 0;
+}
+
+.programacao-item:last-child {
+    border-bottom: none;
+}
+
+.programacao-item span {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.programacao-item p {
+    margin: 0;
+}
+
+.informacao-evento {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.informacao-evento:last-child {
+    border-bottom: none;
+}
+
+.informacao-evento strong {
+    color: var(--cor-primaria-escura);
+}
+
+.informacao-evento p {
+    margin: 5px 0 0;
+}
+
+.texto-pequeno {
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+/* ==========================================
+   FAVORITOS E AGENDA
+   ========================================== */
+
+.agenda-lista {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.agenda-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.agenda-item:last-child {
+    border-bottom: none;
+}
+
+.agenda-data {
+    flex-shrink: 0;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.agenda-item div {
+    flex: 1;
+}
+
+.agenda-item h3 {
+    color: var(--cor-primaria-escura);
+}
+
+.agenda-item p {
+    font-size: 0.85rem;
+    margin: 5px 0 0;
+}
+
+.agenda-item a {
+    font-weight: bold;
+}
+
+.chamada-final {
+    text-align: center;
+    padding: 45px 25px;
+    background: linear-gradient(
+        120deg,
+        var(--cor-primaria-escura),
+        var(--cor-secundaria)
+    );
+    border-radius: var(--raio);
+    color: var(--cor-branco);
+}
+
+.chamada-final h2,
+.chamada-final p {
+    color: var(--cor-branco);
+}
+
+.chamada-final p {
+    margin: 15px 0 25px;
+}
+
+/* ==========================================
+   RODAPÉ
+   ========================================== */
+
+.rodape {
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape p {
+    margin: 0;
+    color: var(--cor-branco);
+}
+
+.rodape nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rodape a {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+.rodape a:hover {
+    color: #b9f4ff;
+}
+
