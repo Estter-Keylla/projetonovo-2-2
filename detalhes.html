@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturama | Detalhes do evento</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a href="../index.html" class="logo">▦ Culturama</a>
+
+            <nav class="menu" aria-label="Menu principal">
+                <a href="../index.html">Início</a>
+                <a href="../eventos.html" class="ativo">Eventos</a>
+                <a href="../index.html#artistas">Artistas</a>
+                <a href="../favoritos.html">Favoritos ♡</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container pagina-interna">
+
+        <a href="eventos.html" class="voltar">
+            ← Voltar aos eventos
+        </a>
+
+        <!-- BANNER DO EVENTO -->
+        <section class="detalhe-banner">
+            <div class="detalhe-ilustracao">
+                🎵
+            </div>
+
+            <div class="detalhe-introducao">
+                <span class="categoria">Show</span>
+
+                <h1>Festival de Música Local</h1>
+
+                <p>
+                    Uma noite dedicada à música,
+                    à cultura e aos talentos da comunidade.
+                </p>
+
+                <span class="selo-gratuito">
+                    Entrada gratuita
+                </span>
+            </div>
+        </section>
+
+        <!-- INFORMAÇÕES -->
+        <div class="layout-detalhes">
+
+            <div class="conteudo">
+
+                <section class="painel">
+                    <h2>Sobre o evento</h2>
+
+                    <p>
+                        O Festival de Música Local é um exemplo
+                        de encontro cultural voltado à valorização
+                        de artistas independentes.
+                    </p>
+
+                    <p>
+                        A proposta é reunir moradores,
+                        músicos e visitantes em um ambiente
+                        de integração e entretenimento.
+                    </p>
+
+                    <p>
+                        Esta programação é ilustrativa
+                        e foi criada para demonstrar
+                        o funcionamento do site Culturama.
+                    </p>
+                </section>
+
+                <!-- PROGRAMAÇÃO -->
+                <section class="painel">
+                    <h2>🎤 Programação</h2>
+
+                    <div class="programacao-item">
+                        <span>19h</span>
+                        <p>Abertura do evento</p>
+                    </div>
+
+                    <div class="programacao-item">
+                        <span>19h30</span>
+                        <p>Apresentações de artistas locais</p>
+                    </div>
+
+                    <div class="programacao-item">
+                        <span>21h</span>
+                        <p>Apresentação musical principal</p>
+                    </div>
+
+                    <div class="programacao-item">
+                        <span>22h</span>
+                        <p>Encerramento</p>
+                    </div>
+                </section>
+
+                <!-- ARTISTAS -->
+                <section class="painel">
+                    <h2>⭐ Participação de artistas</h2>
+
+                    <p>
+                        O evento valoriza apresentações
+                        de artistas da comunidade.
+                    </p>
+
+                    <details class="detalhes-card">
+                        <summary>Como participar?</summary>
+
+                        <p>
+                            Para uma inscrição real,
+                            será necessário disponibilizar
+                            um canal de contato com
+                            os organizadores.
+                        </p>
+                    </details>
+                </section>
+
+                <!-- COMENTÁRIOS -->
+                <section class="painel" id="comentarios">
+                    <h2>💬 Comentários da comunidade</h2>
+
+                    <p>
+                        Compartilhe sua opinião
+                        sobre a proposta do evento.
+                    </p>
+
+                    <p class="aviso">
+                        Este formulário não salva comentários.
+                        É apenas uma demonstração visual.
+                    </p>
+
+                    <form class="formulario" action="#" method="get">
+
+                        <label>
+                            Seu nome
+                            <input type="text"
+                                   name="nome"
+                                   minlength="2"
+                                   required>
+                        </label>
+
+                        <label>
+                            Seu comentário
+                            <textarea name="comentario"
+                                      rows="5"
+                                      minlength="5"
+                                      required></textarea>
+                        </label>
+
+                        <button type="submit" class="botao-principal">
+                            Validar comentário
+                        </button>
+                    </form>
+                </section>
+
+            </div>
+
+            <!-- BARRA LATERAL -->
+            <aside class="barra-lateral">
+
+                <section class="painel">
+                    <h2>📅 Informações</h2>
+
+                    <div class="informacao-evento">
+                        <strong>Data</strong>
+                        <p>14 de novembro de 2026</p>
+                    </div>
+
+                    <div class="informacao-evento">
+                        <strong>Horário</strong>
+                        <p>19h às 22h</p>
+                    </div>
+
+                    <div class="informacao-evento">
+                        <strong>Local</strong>
+                        <p>Centro Cultural</p>
+                    </div>
+
+                    <div class="informacao-evento">
+                        <strong>Categoria</strong>
+                        <p>Show e música</p>
+                    </div>
+
+                    <div class="informacao-evento">
+                        <strong>Entrada</strong>
+                        <p>Gratuita</p>
+                    </div>
+                </section>
+
+                <section class="painel">
+                    <h2>♡ Gostou deste evento?</h2>
+
+                    <p>
+                        Conheça a página de favoritos
+                        e veja como organizar
+                        sua agenda cultural.
+                    </p>
+
+                    <a href="../favoritos.html" class="botao-card">
+                        Meus favoritos
+                    </a>
+
+                    <p class="texto-pequeno">
+                        O salvamento automático
+                        não está disponível sem JavaScript.
+                    </p>
+                </section>
+
+                <section class="painel">
+                    <h2>📢 Compartilhe</h2>
+
+                    <p>
+                        Copie o endereço desta página
+                        pela barra do navegador
+                        para compartilhar o evento.
+                    </p>
+                </section>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>© 2026 Culturama. A cultura aproxima pessoas.</p>
+
+            <nav aria-label="Links do rodapé">
+                <a href="../index.html">Início</a>
+                <a href="../eventos.html">Eventos</a>
+                <a href="../favoritos.html">Favoritos</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
